@@ -39,7 +39,6 @@ html:has(.save-dialog[open]) {
   background-color: white;
   border: 2px solid black;
   width: var(--content-width);
-  height: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   font-family: var(--accent-font);
   text-transform: uppercase;
