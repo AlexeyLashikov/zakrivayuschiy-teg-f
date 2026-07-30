@@ -25,6 +25,7 @@ html:has(.save-dialog[open]) {
   font-family: var(--main-font);
   font-variation-settings: "wght" var(--main-font-weight);
   font-size: 18px;
+  background-color: var(--background-color, #fff);
   background-image: var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -45,7 +46,7 @@ html:has(.save-dialog[open]) {
 }
 
 .header__logo {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: min(clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem), 14vw);
 }
 
 .header__description {
@@ -138,8 +139,9 @@ html:has(.save-dialog[open]) {
     0 -1px var(--label-outline-color);
 }
 
-@supports (-webkit-text-stroke: 1px white) {
+@supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__label {
+    text-stroke: 1px var(--label-outline-color);
     -webkit-text-stroke: 1px var(--label-outline-color);
     text-shadow: none;
   }
@@ -169,7 +171,7 @@ html:has(.save-dialog[open]) {
   border: 2px solid black;
   background-color: white;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus-visible {
@@ -330,6 +332,7 @@ html:has(.save-dialog[open]) {
   display: grid;
   transition: opacity 0.3s ease-in-out;
   inline-size: 353px;
+  max-inline-size: calc(100% - 32px);
   block-size: 191px;
   padding: 30px;
 }

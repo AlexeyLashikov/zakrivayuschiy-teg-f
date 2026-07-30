@@ -5,6 +5,7 @@
   --accent-font: "PressStart2P-Regular", fantasy;
   --main-font-weight: 410;
   --title-font-weight: 715;
+  --background-color: #fff;
   --bg-gradient:
     repeating-linear-gradient(
       to right,
@@ -21,7 +22,10 @@
       transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  --content-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --content-width: min(
+    100%,
+    clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem)
+  );
   --label-outline-color: white;
   --contour-color: black;
   --animation-fill-color: red;
