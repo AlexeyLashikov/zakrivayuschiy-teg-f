@@ -19,7 +19,7 @@ html:has(.save-dialog[open]) {
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  padding-top: 100px;
+  padding: 100px 0;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
@@ -64,7 +64,6 @@ html:has(.save-dialog[open]) {
 .card {
   display: flex;
   flex-direction: column;
-  /* gap: 25px; */
   background-color: white;
   border: 2px solid black;
 }
@@ -140,10 +139,9 @@ html:has(.save-dialog[open]) {
     0 -1px var(--label-outline-color);
 }
 
-@supports ((-webkit-text-stroke: 1px white) or (text-stroke: 1px white)) {
+@supports (-webkit-text-stroke: 1px white) {
   .card__label {
     -webkit-text-stroke: 1px var(--label-outline-color);
-    text-stroke: 1px var(--label-outline-color);
     text-shadow: none;
   }
 }
@@ -164,8 +162,8 @@ html:has(.save-dialog[open]) {
 }
 
 .button {
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
