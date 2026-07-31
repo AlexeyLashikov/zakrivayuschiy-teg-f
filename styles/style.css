@@ -47,6 +47,7 @@ html:has(.save-dialog[open]) {
 
 .header__logo {
   font-size: min(clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem), 14vw);
+  text-decoration: none;
 }
 
 .header__description {
@@ -129,6 +130,7 @@ html:has(.save-dialog[open]) {
 
   font-family: var(--accent-font);
   font-size: 14px;
+  text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
 
